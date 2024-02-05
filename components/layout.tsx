@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
@@ -7,7 +8,7 @@ import Link from "next/link";
 const name = "Your Name";
 export const siteTitle = "localhost blog";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: { children: ReactNode; home?: boolean }) {
   return (
     <div className={styles.container}>
       <Head>
