@@ -6,7 +6,6 @@ import styles from "./post-layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "Knock Off Early";
 export const siteTitle = "Knock Off Early";
 
 export default function Layout({ children, home }: { children: ReactNode; home?: boolean }) {
@@ -28,7 +27,7 @@ export default function Layout({ children, home }: { children: ReactNode; home?:
         {home ? (
           <>
             <Image priority src="/images/profile.png" className={utilStyles.borderCircle} height={144} width={144} alt="" />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
           </>
         ) : (
           <>
@@ -37,7 +36,7 @@ export default function Layout({ children, home }: { children: ReactNode; home?:
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
-                {name}
+                {siteTitle}
               </Link>
             </h2>
           </>

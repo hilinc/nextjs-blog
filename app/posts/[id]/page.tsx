@@ -1,13 +1,14 @@
 import utilStyles from "../../../styles/utils.module.css";
 import Date from "../../../components/date";
 import PostLayout from "../../../components/post-layout";
-import { getPostData } from "../../../lib/posts";
+import { getAllPostIds, getPostData } from "../../../lib/posts";
 import Head from "next/head";
 
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }];
+  const postIds = await getAllPostIds();
+  return postIds.map(post => ({ id: post.params.id }));
 }
 
 export async function generateMetadata({ params }) {
