@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -48,6 +49,7 @@ export default function Layout({ children, home }: { children: ReactNode; home?:
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
