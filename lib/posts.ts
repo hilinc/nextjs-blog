@@ -4,6 +4,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+type IPost = {
+  id: string;
+  contentHtml: string;
+  content: string;
+  date: number;
+  title: string;
+};
+
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
@@ -24,7 +32,7 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data,
-    };
+    } as IPost;
   });
   // Sort posts by date
   return allPostsData.sort((a, b) => {
@@ -77,5 +85,5 @@ export async function getPostData(id) {
     id,
     contentHtml,
     ...matterResult.data,
-  };
+  } as IPost;
 }

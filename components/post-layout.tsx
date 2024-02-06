@@ -2,11 +2,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
+import styles from "./post-layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "KnockOffEarly";
+const name = "Knock Off Early";
 export const siteTitle = "Knock Off Early";
 
 export default function Layout({ children, home }: { children: ReactNode; home?: boolean }) {

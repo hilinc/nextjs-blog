@@ -1,25 +1,16 @@
+// `app/home.tsx`
+"use client";
 import Link from "next/link";
 import Date from "../components/date";
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/post-layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
+// This is a Client Component (same as components in the `pages` directory)
+// It receives data as props, has access to state and effects, and is
+// prerendered on the server during the initial page load.
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <section className={utilStyles.headingMd}>
         <p>Hi, I'm Lynch, I'm a front-end engineer with many years of experience. You can contact me at lync201y@gmail.com</p>
         <p>
