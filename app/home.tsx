@@ -12,12 +12,11 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <section className={utilStyles.headingMd}>
-        <p>Hi, I'm Lynch, I'm a front-end engineer with many years of experience. You can contact me at lync201y@gmail.com</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>Hi, I'm a front-end engineer and I plan to offer many useful tools to help you complete your daily tasks more quickly</p>
+        <p>We have only one goal, and that is to leave work early</p>
+        <p>If you have some good ideas or special requests, you are very welcome to email me. My email is lync201y@gmail.com</p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -30,7 +29,7 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </Layout>
   );
 }
